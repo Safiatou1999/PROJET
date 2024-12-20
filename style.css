@@ -4,23 +4,30 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-color: white; /* Couleur de fond neutre */
+    color: black; /* Texte noir par défaut */
 }
 
 /* Header */
 header {
-    background-color: #f4f4f4;
+    background-color: midnightblue; /* Fond bleu nuit */
+    color: white; /* Texte blanc */
     text-align: center;
-    padding: 20px;
+    padding: 30px;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); /* Forme unique */
 }
 
 header h2 {
-    color: #333;
-    font-size: 24px;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
 }
 
 header p {
-    color: #666;
     font-size: 18px;
+    font-style: italic;
+    margin: 10px 0 0;
 }
 
 /* Navigation */
@@ -29,41 +36,52 @@ nav ul {
     justify-content: center;
     list-style: none;
     padding: 0;
-    background-color: #333;
     margin: 0;
+    background-color: steelblue; /* Fond bleu acier */
 }
 
 nav ul li {
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
+    color: white; /* Texte blanc */
     text-decoration: none;
-    padding: 10px 20px;
-    display: inline-block;
+    padding: 12px 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Effets */
 }
 
 nav ul li a:hover {
-    background-color: #555;
-    color: #fff;
-    border-radius: 5px;
+    background-color: darkblue; /* Fond bleu foncé au survol */
+    transform: scale(1.1); /* Zoom léger */
 }
 
 /* Sections */
 section {
-    padding: 20px;
-    margin: 20px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 80%;
+    background-color: lightgoldenrodyellow; /* Fond jaune doré clair */
+    border-left: 5px solid goldenrod; /* Bordure latérale dorée */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre douce */
+    border-radius: 15px;
 }
 
 section h2 {
     text-align: center;
-    color: #333;
+    font-size: 24px;
+    color: darkgoldenrod; /* Titre doré foncé */
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 section p, section ul {
-    color: #666;
+    color: black; /* Texte noir */
     font-size: 16px;
+    line-height: 1.8;
 }
 
 /* Table */
@@ -71,64 +89,101 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    background-color: white; /* Fond blanc */
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 table th, table td {
-    border: 1px solid #ddd;
-    padding: 10px;
+    border: 1px solid lightgray; /* Bordure grise claire */
+    padding: 15px;
     text-align: left;
 }
 
 table th {
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: goldenrod; /* En-tête dorée */
+    color: white; /* Texte blanc */
+}
+
+table tr:nth-child(even) {
+    background-color: lightyellow; /* Lignes paires jaunes */
+}
+
+table tr:hover {
+    background-color: lightcoral; /* Survol de ligne avec couleur différente */
 }
 
 /* Formulaire */
 form {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: lavender; /* Fond lavande */
+    border: 2px solid darkslateblue; /* Bordure bleue ardoise */
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre douce */
 }
 
 form label {
     margin: 10px 0 5px;
+    font-weight: bold;
+    color: darkslateblue; /* Texte bleu ardoise */
 }
 
 form input, form textarea {
-    padding: 10px;
+    padding: 12px;
     font-size: 16px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    border: 1px solid lightgray; /* Bordure grise claire */
     border-radius: 5px;
 }
 
 form input[type="submit"] {
-    background-color: #333;
-    color: white;
+    background-color: darkblue; /* Bouton bleu foncé */
+    color: white; /* Texte blanc */
+    font-weight: bold;
     border: none;
+    padding: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 form input[type="submit"]:hover {
-    background-color: #555;
+    background-color: steelblue; /* Bleu acier au survol */
+    transform: scale(1.05); /* Zoom léger */
 }
 
 /* Footer */
 footer {
+    background-color: midnightblue; /* Fond bleu nuit */
+    color: white; /* Texte blanc */
     text-align: center;
-    background-color: #333;
-    color: white;
     padding: 20px;
-    margin-top: 20px;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%); /* Forme unique */
+    font-size: 14px;
 }
 
 footer a {
-    color: #fff;
+    color: gold; /* Liens dorés */
     text-decoration: none;
+    font-weight: bold;
 }
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* Effet de survol sur les images */
+img {
+    width: 100%; /* Assurez-vous que les images occupent toute la largeur du conteneur */
+    height: auto; /* Maintenir l'aspect ratio */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Ajout de transition pour l'effet */
+}
+
+/* Effet de zoom et de luminosité au survol */
+img:hover {
+    transform: scale(1.1); /* Zoom léger */
+    filter: brightness(1.2); /* Augmenter la luminosité au survol */
 }
