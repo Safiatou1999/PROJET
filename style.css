@@ -3,7 +3,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    line-height: 1.6; /* cela controle l'espacement entre les lignes de texte.*/
     background-color: white; /* Couleur de fond neutre */
     color: black; /* Texte noir par défaut */
 }
@@ -49,7 +49,6 @@ nav ul li a {
     text-decoration: none;
     padding: 12px 25px;
     font-weight: bold;
-    text-transform: uppercase;
     border-radius: 30px;
     transition: background-color 0.3s ease, transform 0.2s ease; /* Effets */
 }
@@ -57,7 +56,10 @@ nav ul li a {
 nav ul li a:hover {
     background-color: darkblue; /* Fond bleu foncé au survol */
     transform: scale(1.1); /* Zoom léger */
+    text-transform: uppercase;
 }
+
+
 
 /* Sections */
 section {
@@ -66,7 +68,7 @@ section {
     max-width: 80%;
     background-color: lightgoldenrodyellow; /* Fond jaune doré clair */
     border-left: 5px solid goldenrod; /* Bordure latérale dorée */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre douce */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /*ajoute une Ombre douce pour que la section semble flotter au dessus de la page */
     border-radius: 15px;
 }
 
@@ -180,6 +182,7 @@ img {
     width: 100%; /* Assurez-vous que les images occupent toute la largeur du conteneur */
     height: auto; /* Maintenir l'aspect ratio */
     transition: transform 0.3s ease, filter 0.3s ease; /* Ajout de transition pour l'effet */
+    
 }
 
 /* Effet de zoom et de luminosité au survol */
@@ -187,3 +190,10 @@ img:hover {
     transform: scale(1.1); /* Zoom léger */
     filter: brightness(1.2); /* Augmenter la luminosité au survol */
 }
+
+/* #work {
+    display: none;
+}
+#work:hover{
+    display: block;
+} */
